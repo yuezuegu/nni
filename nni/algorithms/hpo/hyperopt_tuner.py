@@ -462,6 +462,8 @@ class HyperoptTuner(Tuner):
             except (KeyError, IndexError):
                 parameter[key] = None
 
+        logger.info("New parameters: {}".format(parameter))
+
         # remove '_index' from json2parameter and save params-id
         total_params = json2parameter(self.json, parameter)
         return total_params

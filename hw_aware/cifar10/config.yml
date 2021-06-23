@@ -1,0 +1,22 @@
+authorName: default
+experimentName: example_pytorch_cifar10
+trialConcurrency: 4
+maxExecDuration: 20h
+maxTrialNum: 20
+#choice: local, remote, pai
+trainingServicePlatform: local
+searchSpacePath: search_space.json
+#choice: true, false
+useAnnotation: false
+logLevel: info
+tuner:
+  #choice: TPE, Random, Anneal, Evolution, BatchTuner, MetisTuner
+  #SMAC (SMAC should be installed through nnictl)
+  builtinTunerName: TPE
+  classArgs:
+    #choice: maximize, minimize
+    optimize_mode: maximize
+trial:
+  command: python3 cifar10.py
+  codeDir: .
+  gpuNum: 0
