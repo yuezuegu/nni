@@ -8,7 +8,11 @@ hyperopt_tuner.py
 import copy
 import logging
 
-import hyperopt as hp
+if False:
+    import hyperopt as hp
+else:
+    import hyperopt_custom as hp
+
 import numpy as np
 from schema import Optional, Schema
 from nni import ClassArgsValidator

@@ -38,7 +38,7 @@ start_epoch = 0  # start from epoch 0 or last checkpoint epoch
 
 learning_rate = 0.01
 momentum = 0.9
-no_epochs = 200
+no_epochs = 1
 batch_size = 128
 
 def prepare(params):
